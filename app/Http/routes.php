@@ -12,7 +12,6 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-
     Route::get('/', 'Home\IndexController@index');
     Route::get('/category', 'Home\IndexController@category');
     Route::get('/cate/{cat_id}', 'Home\IndexController@cate');

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Model\User;
-use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 
@@ -26,7 +24,6 @@ class LoginController extends CommonController
             }
 
             session(['user'=>$user]);
-//            dd(session('user'));
             return redirect('admin/index');
 
         }else {

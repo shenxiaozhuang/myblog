@@ -13,15 +13,9 @@ class Category extends Model
 
     public function tree()
     {
-        $categorys = $this->orderBy('cate_order','asc')->get();
-        return $this->getTree($categorys,'cate_name','cate_id','cate_pid');
+        $data = $this->orderBy('cate_order','asc')->get();
+        return $this->getTree($data,'cate_name','cate_id','cate_pid');
     }
-
-//    public static function tree()
-//    {
-//        $categorys = Category::all();
-//        return (new Category)->getTree($categorys,'cate_name','cate_id','cate_pid');
-//    }
 
     public function getTree($data,$field_name,$field_id='id',$field_pid='pid',$pid=0)
     {

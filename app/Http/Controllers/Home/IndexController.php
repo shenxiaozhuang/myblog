@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Home;
 
-
 use App\Http\Model\Article;
 use App\Http\Model\Category;
 use App\Http\Model\Link;
@@ -61,4 +60,6 @@ class IndexController extends CommonController
 
         return view('home.new', compact('article', 'data'));
     }
+
+
 }
